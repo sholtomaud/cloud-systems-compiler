@@ -1,0 +1,19 @@
+[project]
+name = "csc"
+version = "0.1.0"
+description = "Cloud Systems Compiler Python SDK"
+readme = "README.md"
+authors = [
+    { name = "Jules Bot", email = "jules@example.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
