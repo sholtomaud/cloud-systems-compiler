@@ -12,9 +12,10 @@ Every contribution must be linked to a GitHub Issue and tracked in the GitHub Pr
 - **Update Project Status**: Move the corresponding card in Project #17 to "In Progress".
 
 ### Phase 2: Branching & Environment
-- **Switch Branch**: Every issue has a pre-planned branch name (e.g., `feature/issue-<NUMBER>-<description>`).
-- **Checkout**: `git checkout feature/issue-<NUMBER>-...`
 - **Verify Specs**: Read the `README.md` (the source of truth) and the detailed requirements in the Issue body.
+- **Recommended Branch**: Every issue has a pre-planned branch name in the issue body (e.g., `feature/issue-<NUMBER>-<description>`).
+- **Checkout**: `git checkout <BRANCH_NAME>` as specified in the issue.
+- **Tagging**: If it is not already tagged, tag the issue with the appropriate label (e.g., `bug`, `enhancement`, `documentation`) so that it is easy to find, and an LLM can list open issues by label, such as `enhancement` or `bug`, this is important for an LLM to be able to pick up work and prioritize it.
 
 ### Phase 3: Implementation & Verification
 - **TDD First**: Write tests to verify the compiler behavior against the specification.

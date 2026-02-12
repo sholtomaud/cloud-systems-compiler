@@ -1,4 +1,4 @@
-# Cloud System Compiler (CSC) Specification
+# Cloud Systems Compiler (CSC) Specification
 
 ## Overview
 
@@ -383,16 +383,17 @@ Winglang failed because it tried to replace both application language AND infras
 
 ### Deployment Target
 
-**Primary: Terraform IR**
+**Primary: CloudFormation / CDK Cloud Assembly**
 
 Advantages:
-- Cloud-agnostic (AWS, Azure, GCP, etc.)
-- Mature dependency graph resolution
-- State management
+- Native AWS integration (zero cost)
+- No external runtime dependencies
+- Mature dependency graph resolution (via CDK Assembly)
+- State management via CloudFormation service
 - Drift detection
-- Huge provider ecosystem
 
-Alternative for AWS-only: CDK Cloud Assembly
+**Secondary: Terraform / OpenTofu IR**
+Applicable for multi-cloud scenarios (Azure, GCP) or cross-platform resource management.
 
 ## Core Value Propositions
 
